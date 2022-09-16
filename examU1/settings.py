@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'PNLF_CRUD', # Agregamos la aplicación PNLF_CRUD
 ]
 
 MIDDLEWARE = [
