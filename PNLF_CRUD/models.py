@@ -11,7 +11,7 @@ from pyexpat import model # Importamos el módulo models de pyexpat
 # |----- CLASE #1: Position -----|
 # Clase que almacenará la información (id y nombre) de las posiciones disponibles para los jugaores
 class Position(models.Model):
-    pos_Name =              models.CharField(max_length = 20, verbose_name = "Nombre de la posición")
+    pos_Name =              models.CharField(max_length = 100, verbose_name = "Nombre de la posición")
 
     def __str__ (self):
         return self.pos_Name
@@ -33,6 +33,7 @@ class Team(models.Model):
     team_City =             models.CharField(max_length = 50, verbose_name = "Ciudad del equipo", null = False) # Ciudad del equipo
     team_State =            models.CharField(max_length = 50, verbose_name = "Estado del equipo") # Estado del equipo
     team_Country =          models.CharField(max_length = 50, verbose_name = "País del equipo") # País del equipo
+    team_University =      models.CharField(max_length = 50, verbose_name = "Universidad del equipo", null = False, default='-') # Universidad del equipo
     team_FoundationYear =   models.IntegerField(verbose_name = "Año de fundación del equipo", null = False) # Año de fundación del equipo
     team_nMembers =         models.IntegerField(verbose_name = "Número de miembros del equipo", null = False) # Número de miembros del equipo
     team_Coach =            models.CharField(max_length = 50, verbose_name = "Entrenador del equipo", null = False, default='-') # Entrenador del equipo

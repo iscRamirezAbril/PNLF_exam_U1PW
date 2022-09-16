@@ -12,7 +12,7 @@ class StadiumAdmin(admin.ModelAdmin):
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ['team_Name', 'team_City', 'team_State', 'team_Country', 'team_FoundationYear', 'team_nMembers', 'team_Coach', 'team_Victories', 'team_Defeats', 'team_Status', 'team_Stadium']
+    list_display = ['team_Name', 'team_City', 'team_State', 'team_Country', 'team_University', 'team_FoundationYear', 'team_nMembers', 'team_Coach', 'team_Victories', 'team_Defeats', 'team_Status', 'team_Stadium']
 
 @admin.register(Player)
 class PlayerAdmin(admin.ModelAdmin):
