@@ -5,7 +5,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # path('', views.home, name='home'),
     # Esta es la URL que corresponde a la visualización de los estadios registrados. Esta URL manda a llamar a la función
     # 'stadium_list' que se encuentra en el archivo 'views.py' de la aplicación 'PNLF_CRUD'. 
     path('stadiums/list/', views.stadium_list, name='stadium_List'),

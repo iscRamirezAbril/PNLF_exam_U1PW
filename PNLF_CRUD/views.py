@@ -7,11 +7,11 @@ from django.shortcuts import render
 
 # Función que se encraga de mostrar la lista de los estadios
 def stadium_list(request):
-    return # render(request, 'PNLF_CRUD/stadium_list.html')
+    return render(request, 'stadiums_CRUD/stadium_list.html')
 
 # Función que se encarga de mostrar el formulario para registrar un nuevo estadio
 def stadium_form(request):
-    return # render(request, 'PNLF_CRUD/stadium_form.html')
+    return render(request, 'stadiums_CRUD/stadium_form.html')
 
 # Función que se encarga de eliminar un estadio registrado
 def stadium_delete(request):
