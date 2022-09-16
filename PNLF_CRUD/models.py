@@ -35,6 +35,7 @@ class Team(models.Model):
     team_Country =          models.CharField(max_length = 50, verbose_name = "País del equipo") # País del equipo
     team_FoundationYear =   models.IntegerField(verbose_name = "Año de fundación del equipo", null = False) # Año de fundación del equipo
     team_nMembers =         models.IntegerField(verbose_name = "Número de miembros del equipo", null = False) # Número de miembros del equipo
+    team_Coach =            models.CharField(max_length = 50, verbose_name = "Entrenador del equipo", null = False, default='-') # Entrenador del equipo
     team_Victories =        models.IntegerField(verbose_name = "Número de victorias del equipo", null = False) # Número de victorias del equipo
     team_Defeats =          models.IntegerField(verbose_name = "Número de derrotas del equipo", null = False) # Número de derrotas del equipo
     team_Status =           models.BooleanField(verbose_name = "Estado del equipo") # Estado del equipo
@@ -55,6 +56,6 @@ class Player(models.Model):
     player_Number =         models.IntegerField(verbose_name = "Número del jugador", null = False) # Número del jugador
     player_JoinDate =       models.DateField(verbose_name = "Fecha de ingreso del jugador") # Fecha de ingreso del jugador
     # |----- Relación de la clase Player con la clase Team -----|
-    player_Team =           models.ForeignKey(Team, on_delete = models.CASCADE, verbose_name = "Equipo del miembro", null = False) # Equipo del jugador
+    player_Team =           models.ForeignKey(Team, on_delete = models.CASCADE, verbose_name = "Equipo del jugador", null = False) # Equipo del jugador
     # |----- Relación de la clase Player con la clase Position -----|
-    player_Position =       models.ForeignKey(Position, on_delete = models.CASCADE, verbose_name = "Posición del miembro", null = False) # Posición del jugador
+    player_Position =       models.ForeignKey(Position, on_delete = models.CASCADE, verbose_name = "Posición del jugador", null = False) # Posición del jugador
