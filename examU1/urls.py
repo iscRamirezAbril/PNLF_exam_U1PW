@@ -14,8 +14,26 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+# Importar de django.urls el path e include
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # |--------------------------------------------------|
+    # |-----------------| NUEVAS RUTAS |-----------------|
+    # |--------------------------------------------------|
+    
+    # -----> Ruta #1: 'home' <----- #
+    # Agregamos la ruta 'home' que apunta a la aplicación PNLF_CRUD y a su archivo urls.py, la cual será "http://127.0.0.1:8000/home/”
+    path('home/', include('PNLF_CRUD.urls')),
+    # -----> Ruta #2: 'stadiums' <----- #
+    # Agregamos la ruta 'stadiums' que apunta a la aplicación PNLF_CRUD y a su archivo urls.py, la cual será "http://127.0.0.1:8000/stadiums/"
+    path('stadiums/', include('PNLF_CRUD.urls')),
+    # -----> Ruta #3: 'teams' <----- #
+    # Agregamos la ruta 'teams' que apunta a la aplicación PNLF_CRUD y a su archivo urls.py, la cual será "http://127.0.0.1:8000/teams/"
+    path('teams/', include('PNLF_CRUD.urls')),
+    # -----> Ruta #4: 'players' <----- #
+    # Agregamos la ruta 'players' que apunta a la aplicación PNLF_CRUD y a su archivo urls.py, la cual será "http://127.0.0.1:8000/players/"
+    path('players/', include('PNLF_CRUD.urls')),
 ]
