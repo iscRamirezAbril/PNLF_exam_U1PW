@@ -37,6 +37,7 @@ def stadium_form(request, id=0):
             form = stadiumForm(request.POST, instance=stadium) # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
         if form.is_valid(): # Si el formulario es válido, se procede a guardar los datos en la base de datos
             form.save() # Se guarda el formulario
+        messages.success(request, 'El estadio ha sido registrado con éxito.') # Se muestra un mensaje de éxito
         return redirect('/stadiums/list/') # Se redirecciona a la página de la lista de estadios
 
 # Función que se encarga de eliminar un estadio registrado

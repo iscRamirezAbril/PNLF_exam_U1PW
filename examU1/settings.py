@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config # De la librería decouple importamos la función config para leer el archivo .env
+from django.contrib import messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,8 +28,6 @@ SECRET_KEY = config('SECRET_KEY') # Leemos la variable SECRET_KEY del archivo .e
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 # Application definition
 
