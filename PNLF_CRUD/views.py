@@ -11,26 +11,37 @@ from .models import * # Se importan todos los modelos del archivo 'models.py'
 # Función que se encraga de mostrar la lista de los estadios
 def stadium_list(request):
     context = {'stadium_list': Stadium.objects.all()} # Se crea un diccionario con la lista de estadios
-    return render(request, 'stadiums_CRUD/stadium_list.html')
+    # Se renderiza el archivo 'stadium_list.html' y se le envía el diccionario creado
+    return render(request, 'stadiums_CRUD/stadium_list.html', context)
 
 # Función que se encarga de mostrar el formulario para registrar un nuevo estadio
-def stadium_form(request):
+def stadium_form(request, id=0):
     # Si el método de la petición es "GET", se crea un objeto del formulario "stadiumForm" y se envía a la plantilla
     if request.method == "GET":
-        form = stadiumForm() # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
+        if id == 0:
+            form = stadiumForm() # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
+        else:
+            stadium = Stadium.objects.get(pk=id) # Se obtiene el estadio que se desea actualizar
+            form = stadiumForm(instance=stadium) # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
         # Se renderiza el archivo 'stadium_form.html' y se le envía el formulario creado
         return render(request, 'stadiums_CRUD/stadium_form.html', {'form': form})
     
     # Si el método de la petición es "POST", se crea un objeto del formulario "stadiumForm" y se envía a la plantilla
     else:
-        form = stadiumForm(request.POST) # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
+        if id == 0:
+            form = stadiumForm(request.POST) # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
+        else:
+            stadium = Stadium.objects.get(pk=id) # Se obtiene el estadio que se desea actualizar
+            form = stadiumForm(request.POST, instance=stadium) # Se crea una instancia de la clase 'stadiumForm' que se encuentra en el archivo 'forms.py'
         if form.is_valid(): # Si el formulario es válido, se procede a guardar los datos en la base de datos
             form.save() # Se guarda el formulario
         return redirect('/stadiums/list/') # Se redirecciona a la página de la lista de estadios
 
 # Función que se encarga de eliminar un estadio registrado
-def stadium_delete(request):
-    return # render(request, 'PNLF_CRUD/stadium_delete.html')
+def stadium_delete(request, id):
+    stadium = Stadium.objects.get(pk=id) # Se obtiene el estadio que se desea eliminar
+    stadium.delete() # Se elimina el estadio
+    return redirect('/stadiums/list/') # Se redirecciona a la página de la lista de estadios
 
 # --------------------------------------------------------------------------------------------- #
 # |-------------------| FUNCIONES DE VISTA CORRESPONDIENTES A LOS EQUIPOS |-------------------| #
