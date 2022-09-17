@@ -1,7 +1,9 @@
 # |----- Importación de librerías -----|
+from os import name
 from django.shortcuts import render, redirect # Se importan las funciones render y redirect de Django
 from PNLF_CRUD.forms import * # Se importan todos los formularios del archivo 'forms.py'
 from .models import * # Se importan todos los modelos del archivo 'models.py'
+from django.contrib import messages
 
 # Create your views here.
 # ---------------------------------------------------------------------------------------------- #
@@ -41,6 +43,7 @@ def stadium_form(request, id=0):
 def stadium_delete(request, id):
     stadium = Stadium.objects.get(pk=id) # Se obtiene el estadio que se desea eliminar
     stadium.delete() # Se elimina el estadio
+    messages.success(request, 'El estadio ha sido eliminado correctamente.') # Se muestra un mensaje de éxito
     return redirect('/stadiums/list/') # Se redirecciona a la página de la lista de estadios
 
 # --------------------------------------------------------------------------------------------- #

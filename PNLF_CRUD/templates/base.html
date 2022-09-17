@@ -20,6 +20,14 @@
                 <p class="lead font-italic">Welcome to the stadium register form</p>
                 <hr class="my-4">
 
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
                 <!-- INICIO del Bloque de contenido -->
                 {% block content %}
                 {% endblock content %}
@@ -39,7 +47,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
 </body>
 </html>
 {% include 'footer.html' %}
