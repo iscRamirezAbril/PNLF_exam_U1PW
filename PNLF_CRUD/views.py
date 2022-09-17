@@ -53,15 +53,40 @@ def stadium_delete(request, id):
 
 # Función que se encarga de mostrar la lista de los equipos
 def team_list(request):
-    return # render(request, 'PNLF_CRUD/team_list.html')
+    context = {'team_list': Team.objects.all()} # Se crea un diccionario con la lista de equipos
+    # Se renderiza el archivo 'teams_list.html' y se le envía el diccionario creado
+    return render(request, 'teams_CRUD/team_list.html', context)
 
 # Función que se encarga de mostrar el formulario para registrar un nuevo equipo
-def team_form(request):
-    return # render(request, 'PNLF_CRUD/team_form.html')
+def team_form(request, id=0):
+    # Si el método de la petición es "GET", se crea un objeto del formulario "teamForm" y se envía a la plantilla
+    if request.method == "GET":
+        if id == 0:
+            form = teamForm() # Se crea una instancia de la clase 'teamForm' que se encuentra en el archivo 'forms.py'
+        else:
+            team = Team.objects.get(pk=id) # Se obtiene el equipo que se desea actualizar
+            form = teamForm(instance=team) # Se crea una instancia de la clase 'teamForm' que se encuentra en el archivo 'forms.py'
+        # Se renderiza el archivo 'team_form.html' y se le envía el formulario creado
+        return render(request, 'teams_CRUD/team_form.html', {'form': form})
+    
+    # Si el método de la petición es "POST", se crea un objeto del formulario "teamForm" y se envía a la plantilla
+    else:
+        if id == 0:
+            form = teamForm(request.POST) # Se crea una instancia de la clase 'teamForm' que se encuentra en el archivo 'forms.py'
+        else:
+            team = Team.objects.get(pk=id) # Se obtiene el estadio que se desea actualizar
+            form = teamForm(request.POST, instance=team) # Se crea una instancia de la clase 'teamForm' que se encuentra en el archivo 'forms.py'
+        if form.is_valid(): # Si el formulario es válido, se procede a guardar los datos en la base de datos
+            form.save() # Se guarda el formulario
+        messages.success(request, 'El equipo ha sido registrado con éxito.') # Se muestra un mensaje de éxito
+        return redirect('/teams/list/') # Se redirecciona a la página de la lista de equipos
 
 # Función que se encarga de eliminar un equipo registrado
-def team_delete(request):
-    return # render(request, 'PNLF_CRUD/team_delete.html')
+def team_delete(request, id):
+    team = Team.objects.get(pk=id) # Se obtiene el estadio que se desea eliminar
+    team.delete() # Se elimina el equipo
+    messages.success(request, 'El equipo ha sido eliminado correctamente.') # Se muestra un mensaje de éxito
+    return redirect('/teams/list/') # Se redirecciona a la página de la lista de equipos
 
 # ----------------------------------------------------------------------------------------------- #
 # |-------------------| FUNCIONES DE VISTA CORRESPONDIENTES A LOS JUGADORES |-------------------| #
@@ -69,12 +94,37 @@ def team_delete(request):
 
 # Función que se encarga de mostrar la lista de los jugadores
 def player_list(request):
-    return # render(request, 'PNLF_CRUD/player_list.html')
+    context = {'player_list': Player.objects.all()} # Se crea un diccionario con la lista de jugadores
+    # Se renderiza el archivo 'players_list.html' y se le envía el diccionario creado
+    return render(request, 'players_CRUD/player_list.html', context)
 
 # Función que se encarga de mostrar el formulario para registrar un nuevo jugador
-def player_form(request):
-    return # render(request, 'PNLF_CRUD/player_form.html')
+def player_form(request, id = 0):
+    # Si el método de la petición es "GET", se crea un objeto del formulario "playerForm" y se envía a la plantilla
+    if request.method == "GET":
+        if id == 0:
+            form = playerForm() # Se crea una instancia de la clase 'playerForm' que se encuentra en el archivo 'forms.py'
+        else:
+            player = Player.objects.get(pk=id) # Se obtiene el equipo que se desea actualizar
+            form = playerForm(instance=player) # Se crea una instancia de la clase 'playerForm' que se encuentra en el archivo 'forms.py'
+        # Se renderiza el archivo 'player_form.html' y se le envía el formulario creado
+        return render(request, 'players_CRUD/player_form.html', {'form': form})
+    
+    # Si el método de la petición es "POST", se crea un objeto del formulario "playerForm" y se envía a la plantilla
+    else:
+        if id == 0:
+            form = playerForm(request.POST) # Se crea una instancia de la clase 'playerForm' que se encuentra en el archivo 'forms.py'
+        else:
+            player = Player.objects.get(pk=id) # Se obtiene el estadio que se desea actualizar
+            form = playerForm(request.POST, instance=player) # Se crea una instancia de la clase 'playerForm' que se encuentra en el archivo 'forms.py'
+        if form.is_valid(): # Si el formulario es válido, se procede a guardar los datos en la base de datos
+            form.save() # Se guarda el formulario
+        messages.success(request, 'El jugador ha sido registrado con éxito.') # Se muestra un mensaje de éxito
+        return redirect('/players/list/') # Se redirecciona a la página de la lista de jugadores
 
 # Función que se encarga de eliminar un jugador registrado
-def player_delete(request):
-    return # render(request, 'PNLF_CRUD/player_delete.html')
+def player_delete(request, id):
+    player = Player.objects.get(pk=id) # Se obtiene el estadio que se desea eliminar
+    player.delete() # Se elimina el jugador
+    messages.success(request, 'El jugador ha sido eliminado correctamente.') # Se muestra un mensaje de éxito
+    return redirect('/players/list/') # Se redirecciona a la página de la lista de jugadores

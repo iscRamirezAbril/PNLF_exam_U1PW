@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %} 
+
+{% block content%}
+<form action = "", method = "post", autocomplete = "off">
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.team_Name|as_crispy_field}}
+        </div>
+
+        <div class="col-md-6">
+            {{form.team_City|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            {{form.team_State|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.team_University|as_crispy_field}}
+        </div>
+
+        <div class="col-md-6">
+            {{form.team_FoundationYear|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.team_nMembers|as_crispy_field}}
+        </div>
+
+        <div class="col-md-6">
+            {{form.team_Coach|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.team_Victories|as_crispy_field}}
+        </div>
+
+        <div class="col-md-6">
+            {{form.team_Defeats|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.team_Stadium|as_crispy_field}}
+        </div>
+        
+        <div class="col-md-6">
+            {{form.team_Status|as_crispy_field}}
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success">Registrar</button>
+        </div>
+
+        <div class="col-md-4">
+            <a href="{% url 'team_List' %}" type="submit" class="btn btn-outline-secondary">Regresar</a>
+        </div>
+    </div>
+</form>
+{% endblock %}

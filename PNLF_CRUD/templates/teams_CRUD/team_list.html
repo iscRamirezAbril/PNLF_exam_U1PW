@@ -11,9 +11,15 @@
             <td>Nombre</td>
             <td>Ciudad</td>
             <td>Estado</td>
-            <td>Capacidad</td>
+            <td>Universidad</td>
+            <td>Fecha de fundación</td>
+            <td>Número de miembros</td>
+            <td>Victorias</td>
+            <td>Derrotas</td>
+            <td>Estado</td>
+            <td>Estadio</td>
             <td>
-                <a href="{% url 'stadium_Form' %}" class="btn btn-outline-success">
+                <a href="{% url 'team_Form' %}" class="btn btn-outline-success">
                     <i class="fas fa-plus"></i> Add
                 </a>
             </td>
@@ -23,20 +29,26 @@
     <!-- Etiqueta "tbody", la cual se emplea para definir el cuerpo de la tabla -->
     <tbody>
         <!-- Etiqueta "for", la cual se emplea para iterar sobre una lista de objetos -->
-        {% for stadium in stadium_list %}
+        {% for team in team_list %}
             <!-- Etiqueta "tr", la cual se emplea para definir cada fila de la tabla -->
             <tr>
-                <td>{{ stadium.stdm_Name }}</td>
-                <td>{{ stadium.stdm_City }}</td>
-                <td>{{ stadium.stdm_State }}</td>
-                <td>{{ stadium.stdm_Capacity }}</td>
+                <td>{{ team.team_Name }}</td>
+                <td>{{ team.team_City }}</td>
+                <td>{{ team.team_State }}</td>
+                <td>{{ team.team_University }}</td>
+                <td>{{ team.team_FoundationYear }}</td>
+                <td>{{ team.team_nMembers }}</td>
+                <td>{{ team.team_Victories }}</td>
+                <td>{{ team.team_Defeats }}</td>
+                <td>{{ team.team_Status }}</td>
+                <td>{{ team.team_Stadium }}</td>
                 <td>
                     <!-- Se agrega un botón que redirecciona al usuario -->
-                    <a href="{% url 'stadium_Update' stadium.id %}" class="btn text-secondary px-8">
+                    <a href="{% url 'team_Update' team.id %}" class="btn text-secondary px-8">
                         <i class="far fa-edit fa-lg"></i>
                     </a>
 
-                    <a href="{% url 'stadium_Delete' stadium.id %}" class="btn text-danger px-8">
+                    <a href="{% url 'team_Delete' team.id %}" class="btn text-danger px-8">
                         <i class="far fa-trash-alt fa-lg"></i>
                 </td>
             </tr>
