@@ -41,7 +41,7 @@ Al igual que la sección de estadios, el administrador podrá visualizar la list
   <img src="images/img_sitioRegistroEquipos.jpeg" alt="Sitio del formulario de registro de equipos" style="width: 30rem"/>
 </p>
 
-Este es el formulario que se mostrará al momento de presionar el botón **"+Add"** del sitio de visualización de la lista de equipos. Una vez que los datos sean correctos, se dará clic al botón de **"Registrar"** y el administrador será redireccionado a la página de visualización de jugadores registrados, pudiendo notar el nuevo registro realizado.
+Este es el formulario que se mostrará al momento de presionar el botón **"+Add"** del sitio de visualización de la lista de equipos. Una vez que los datos sean correctos, se dará clic al botón de **"Registrar"** y el administrador será redireccionado a la página de visualización de equipos registrados, pudiendo notar el nuevo registro realizado.
 
 #### **-----> JUGADORES <-----**
 #### _**LISTA**_
@@ -53,8 +53,10 @@ Por último, tenemos el sitio de la lista de jugadores, donde el administrador p
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroJugadores.jpeg" alt="Sitio del formulario de registro de jugadores" style="width 30rem"/>
+  <img src="images/img_sitioRegistroJugadores.jpeg" alt="Sitio del formulario de registro de equipos" style="width: 30rem"/>
 </p>
+
+Este es el formulario que se mostrará al momento de presionar el botón **"+Add"** del sitio de visualización de la lista de jugadores. Una vez que los datos sean correctos, se dará clic al botón de **"Registrar"** y el administrador será redireccionado a la página de visualización de jugadores registrados, pudiendo notar el nuevo registro realizado.
 
 ### **|-----| Acerca del autor |-----|**
 #### **Nombre.**
