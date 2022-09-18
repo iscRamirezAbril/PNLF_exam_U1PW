@@ -16,34 +16,34 @@ El proyecto que se realizó fue un sitio web de administración, el cual cuenta 
 #### **-----> ESTADIOS <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaEstadios.jpeg"; style="width: 30rem"; />
+  <img src="images/img_sitioListaEstadios.jpeg"; style="width: 30rem"; alt="Sitio de la lista de estadios registrados";/>
 </p>
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroEstadios.jpeg"; style="width: 30rem"; />
+  <img src="images/img_sitioRegistroEstadios.jpeg"; style="width: 30rem"; alt="Sitio del formulario de registro de estadios";/>
 </p>
 
 #### **-----> EQUIPOS <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaEquipos.jpeg"; style="width: 30rem"; />
+  <img src="images/img_sitioListaEquipos.jpeg"; style="width: 30rem"; alt="Sitio de la lista de equipos registrados";/>
 </p>
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroEquipos.jpeg"; style="width: 30rem"; />
+  <img src="images/img_sitioRegistroEquipos.jpeg"; style="width: 30rem"; alt="Sitio del formulario de registro de equipos";/>
 </p>
 
 #### **-----> JUGADORES <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaJugadores.jpeg"; style="width: 30rem"; />
+  <img src="images/img_sitioListaJugadores.jpeg"; style="width: 30rem"; alt="Sitio de la lista de jugadores registrados";/>
 </p>
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroJugadores.jpeg"; style="width: 30rem"; />
+  <img src="images/img_sitioRegistroJugadores.jpeg"; style="width: 30rem"; alt="Sitio del formulario de registro de jugadores";/>
 </p>
 
 ### **|-----| Acerca del autor |-----|**
