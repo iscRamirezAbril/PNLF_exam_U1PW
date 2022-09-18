@@ -2,21 +2,25 @@
 {% load crispy_forms_tags %} 
 
 {% block content%}
+
+<h1 class="display-4">Formulario de registro de equipos</h1>
+<h4> Todos los campos son obligatorios </h4>
+
+<hr class="my-4">
+
 <form action = "", method = "post", autocomplete = "off">
     {% csrf_token %}
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             {{form.team_Name|as_crispy_field}}
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             {{form.team_City|as_crispy_field}}
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
             {{form.team_State|as_crispy_field}}
         </div>
     </div>
@@ -26,38 +30,36 @@
             {{form.team_University|as_crispy_field}}
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-2">
             {{form.team_FoundationYear|as_crispy_field}}
+        </div>
+
+        <div class="col-md-4">
+            {{form.team_nMembers|as_crispy_field}}
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-6">
-            {{form.team_nMembers|as_crispy_field}}
-        </div>
-
         <div class="col-md-6">
             {{form.team_Coach|as_crispy_field}}
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-2">
             {{form.team_Victories|as_crispy_field}}
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-2">
             {{form.team_Defeats|as_crispy_field}}
+        </div>
+
+        <div class="col-md-2">
+            {{form.team_Status|as_crispy_field}}
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
             {{form.team_Stadium|as_crispy_field}}
-        </div>
-        
-        <div class="col-md-6">
-            {{form.team_Status|as_crispy_field}}
         </div>
     </div>
     

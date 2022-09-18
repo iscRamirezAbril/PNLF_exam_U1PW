@@ -76,7 +76,7 @@ class playerForm(forms.ModelForm):
             'player_Name': 'Nombre del jugador',
             'player_LastName': 'Apellido del jugador',
             'player_Birthdate': 'Fecha de nacimiento',
-            'player_citizenShip': 'Ciudadanía',
+            'player_citizenShip': 'Nacionalidad',
             'player_Status': 'Estado',
             'player_Number': 'Número',	
             'player_JoinDate': 'Fecha de ingreso',

@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content%}
+
+<h1 class="display-4">Lista de equipos</h1>
+<h4> Página donde podrá tener acceso a la información de los equipos registrados </h4>
+
+<hr class="my-4">
+
 <!-- Etiqueta "table", la cual se encarga de coemnzar un apartado de tabla -->
-<table class="table table-sm">
+<table class="table table-sm table-borderless">
     <!-- Etiqueta "thead",  -->
-    <thead class="border-bottom font-weight-bold">
+    <thead class="font-weight-bold">
         <!-- Etiqueta "tr", la cual se emplea para definir cada fila de la tabla -->
         <tr>
             <!-- Etiqueta "td", la cual se emplea para definir las cabeceras de una fila o de una columna de la tabla -->
@@ -19,7 +25,7 @@
             <td>Estado</td>
             <td>Estadio</td>
             <td>
-                <a href="{% url 'team_Form' %}" class="btn btn-outline-success">
+                <a href="{% url 'team_Form' %}" class="btn btn-success btn-sm">
                     <i class="fas fa-plus"></i> Add
                 </a>
             </td>
@@ -47,9 +53,12 @@
                     <a href="{% url 'team_Update' team.id %}" class="btn text-secondary px-8">
                         <i class="far fa-edit fa-lg"></i>
                     </a>
+                </td>
 
+                <td>
                     <a href="{% url 'team_Delete' team.id %}" class="btn text-danger px-8">
                         <i class="far fa-trash-alt fa-lg"></i>
+                    </a>
                 </td>
             </tr>
         {% endfor %}

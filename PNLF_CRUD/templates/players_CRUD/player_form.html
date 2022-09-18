@@ -2,6 +2,12 @@
 {% load crispy_forms_tags %} 
 
 {% block content%}
+
+<h1 class="display-4">Formulario de registro de jugadores</h1>
+<h4> Todos los campos son obligatorios </h4>
+
+<hr class="my-4">
+
 <form action = "", method = "post", autocomplete = "off">
     {% csrf_token %}
 
@@ -16,28 +22,12 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             {{form.player_Birthdate|as_crispy_field}}
         </div>
-    </div>
 
-    <div class="row">
         <div class="col-md-6">
             {{form.player_citizenShip|as_crispy_field}}
-        </div>
-
-        <div class="col-md-6">
-            {{form.player_Status|as_crispy_field}}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            {{form.player_Number|as_crispy_field}}
-        </div>
-
-        <div class="col-md-6">
-            {{form.player_JoinDate|as_crispy_field}}
         </div>
     </div>
 
@@ -46,18 +36,32 @@
             {{form.player_Team|as_crispy_field}}
         </div>
 
+        <div class="col-md-2">
+            {{form.player_Number|as_crispy_field}}
+        </div>
+
+        <div class="col-md-4">
+            {{form.player_JoinDate|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-md-6">
             {{form.player_Position|as_crispy_field}}
         </div>
+        
+        <div class="col-md-6">
+            {{form.player_Status|as_crispy_field}}
+        </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-4">
             <button type="submit" class="btn btn-success">Registrar</button>
         </div>
 
         <div class="col-md-4">
-            <a href="{% url 'team_List' %}" type="submit" class="btn btn-outline-secondary">Regresar</a>
+            <a href="{% url 'player_List' %}" type="submit" class="btn btn-outline-secondary">Regresar</a>
         </div>
     </div>
 </form>
