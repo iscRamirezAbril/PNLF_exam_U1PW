@@ -15,34 +15,34 @@ El proyecto que se realizó fue un sitio web de administración, el cual cuenta 
 #### **-----> ESTADIOS <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaEstadios.jpeg" />
+  <img src="images/img_sitioListaEstadios.jpeg"; style="width: 30rem"; />
 </p>
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroEstadios.jpeg" />
+  <img src="images/img_sitioRegistroEstadios.jpeg"; style="width: 30rem"; />
 </p>
 
 #### **-----> EQUIPOS <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaEquipos.jpeg" />
+  <img src="images/img_sitioListaEquipos.jpeg"; style="width: 30rem"; />
 </p>
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroEquipos.jpeg" />
+  <img src="images/img_sitioRegistroEquipos.jpeg"; style="width: 30rem"; />
 </p>
 
 #### **-----> JUGADORES <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaJugadores.jpeg" />
+  <img src="images/img_sitioListaJugadores.jpeg"; style="width: 30rem"; />
 </p>
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroJugadores.jpeg" />
+  <img src="images/img_sitioRegistroJugadores.jpeg"; style="width: 30rem"; />
 </p>
 
 ### **|-----| Acerca del autor |-----|**
