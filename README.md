@@ -16,34 +16,44 @@ El proyecto que se realizó fue un sitio web de administración, el cual cuenta 
 #### **-----> ESTADIOS <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaEstadios.jpeg"; style="width: 30rem"; alt="Sitio de la lista de estadios registrados";/>
+  <img src="images/img_sitioListaEstadios.jpeg" alt="Sitio de la lista de estadios registrados" style="width: 30rem"/>
 </p>
+
+En esta sección del sitio web, el administrador podrá visualizar la lista de los estadios que actualmente se encuentran registrados en la Liga. Además, podrá tener acceso a otras funcionalidades, como lo son **eliminación** o **modificación**.
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroEstadios.jpeg"; style="width: 30rem"; alt="Sitio del formulario de registro de estadios";/>
+  <img src="images/img_sitioRegistroEstadios.jpeg" alt="Sitio del formulario de registro de estadios" style="width: 30rem"/>
 </p>
+
+Este es el formulario que se mostrará al momento de presionar el botón **"+Add"** del sitio de visualización de la lista de estadios. Una vez que los datos sean correctos, se dará clic al botón de **"Registrar"** y el administrador será redireccionado a la página de visualización de estadios registrados, pudiendo notar el nuevo registro realizado.
 
 #### **-----> EQUIPOS <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaEquipos.jpeg"; style="width: 30rem"; alt="Sitio de la lista de equipos registrados";/>
+  <img src="images/img_sitioListaEquipos.jpeg" alt="Sitio de la lista de equipos registrados" style="width: 30rem"/>
 </p>
+
+Al igual que la sección de estadios, el administrador podrá visualizar la lista de los equipos que actualmente se encuentran registrados en la Liga. Además, podrá tener acceso a otras funcionalidades, como lo son **eliminación** o **modificación**.
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroEquipos.jpeg"; style="width: 30rem"; alt="Sitio del formulario de registro de equipos";/>
+  <img src="images/img_sitioRegistroEquipos.jpeg" alt="Sitio del formulario de registro de equipos" style="width: 30rem"/>
 </p>
+
+Este es el formulario que se mostrará al momento de presionar el botón **"+Add"** del sitio de visualización de la lista de equipos. Una vez que los datos sean correctos, se dará clic al botón de **"Registrar"** y el administrador será redireccionado a la página de visualización de jugadores registrados, pudiendo notar el nuevo registro realizado.
 
 #### **-----> JUGADORES <-----**
 #### _**LISTA**_
 <p align="center">
-  <img src="images/img_sitioListaJugadores.jpeg"; style="width: 30rem"; alt="Sitio de la lista de jugadores registrados";/>
+  <img src="images/img_sitioListaJugadores.jpeg" alt="Sitio de la lista de jugadores registrados" style="width: 30rem"/>
 </p>
+
+Por último, tenemos el sitio de la lista de jugadores, donde el administrador podrá visualizar los jugadores que actualmente se encuentran registrados en la Liga. Además, podrá tener acceso a otras funcionalidades, como lo son **eliminación** o **modificación**.
 
 #### _**REGISTRO**_
 <p align="center">
-  <img src="images/img_sitioRegistroJugadores.jpeg"; style="width: 30rem"; alt="Sitio del formulario de registro de jugadores";/>
+  <img src="images/img_sitioRegistroJugadores.jpeg" alt="Sitio del formulario de registro de jugadores" style="width 30rem"/>
 </p>
 
 ### **|-----| Acerca del autor |-----|**
