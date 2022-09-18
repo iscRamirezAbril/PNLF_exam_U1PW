@@ -75,11 +75,11 @@ class playerForm(forms.ModelForm):
         labels = {
             'player_Name': 'Nombre del jugador',
             'player_LastName': 'Apellido del jugador',
-            'player_Birthdate': 'Fecha de nacimiento',
+            'player_Birthdate': 'Fecha de nacimiento (Ej. October 25, 1987)',
             'player_citizenShip': 'Nacionalidad',
             'player_Status': 'Estado',
             'player_Number': 'Número',	
-            'player_JoinDate': 'Fecha de ingreso',
+            'player_JoinDate': 'Fecha de ingreso (Ej. October 25, 1987)',
             'player_Team': 'Equipo',
             'player_Position': 'Posición'
         }
